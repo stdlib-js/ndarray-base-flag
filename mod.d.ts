@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,26 +16,33 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return a specified flag for a provided ndarray.
+* Flag name.
+*/
+type Flag = string | symbol | number;
+
+/**
+* Returns a specified flag for a provided ndarray.
 *
-* @module @stdlib/ndarray-base-flag
+* @param x - input ndarray
+* @param name - flag name
+* @returns flag value
 *
 * @example
-* var zeros = require( '@stdlib/ndarray-zeros' );
-* var flag = require( '@stdlib/ndarray-base-flag' );
+* var zeros = require( `@stdlib/ndarray/zeros` );
 *
-* var out = flag( zeros( [ 3, 3, 3 ] ), 'READONLY' );
+* var o = flag( zeros( [ 3, 3, 3 ] ), 'READONLY' );
 * // returns <boolean>
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function flag<T = unknown>( x: ndarray, name: Flag ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = flag;
