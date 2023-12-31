@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Return a specified flag for provided [ndarray][@stdlib/ndarray/base/ctor].
+> Return a specified flag for a provided [ndarray][@stdlib/ndarray/base/ctor].
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -73,7 +73,7 @@ var flag = require( '@stdlib/ndarray-base-flag' );
 
 #### flag( x, name )
 
-Returns a specified flag for provided [ndarray][@stdlib/ndarray/base/ctor].
+Returns a specified flag for a provided [ndarray][@stdlib/ndarray/base/ctor].
 
 ```javascript
 var zeros = require( '@stdlib/ndarray-zeros' );
