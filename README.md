@@ -45,43 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-flag
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-flag = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flag@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-flag/tags). For example,
-
-```javascript
-flag = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flag@v0.2.1-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var flag = require( 'path/to/vendor/umd/ndarray-base-flag/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flag@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.flag;
-})();
-</script>
+var flag = require( '@stdlib/ndarray-base-flag' );
 ```
 
 #### flag( x, name )
@@ -120,17 +109,12 @@ var o = flag( x, 'READONLY' );
 
 <!-- eslint-disable new-cap -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flag@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var zeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var E = require( '@stdlib/slice-multi' );
+var S = require( '@stdlib/slice-ctor' );
+var flag = require( '@stdlib/ndarray-base-flag' );
 
 // Create an array:
 var x = zeros( [ 10, 10, 10, 10 ] );
@@ -161,11 +145,6 @@ for ( i = 0; i < slices.length; i++ ) {
     s = slice( x, slices[ i ] );
     console.log( '%s', flag( s, 'ROW_MAJOR_CONTIGUOUS' ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -227,8 +206,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-base-flag.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-base-flag
 
-[test-image]: https://github.com/stdlib-js/ndarray-base-flag/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/ndarray-base-flag/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/ndarray-base-flag/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/ndarray-base-flag/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-base-flag/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-base-flag?branch=main
@@ -260,7 +239,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-flag/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor/tree/umd
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor
 
 </section>
 
